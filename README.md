@@ -70,6 +70,35 @@ However, these figures represent independent event-level user counts rather than
 - Build a sequential conversion funnel.
 - Compare conversion performance across acquisition sources and devices.
 - Investigate potential areas of friction in the purchasing journey.
+
+- ### Data Quality Assessment
+
+**Objective:** Evaluate the completeness of user identifiers before conducting user-level conversion and customer journey analysis.
+
+**Methodology:**
+- Count total events.
+- Assess the availability of `user_id` and `user_pseudo_id`.
+- Calculate the percentage of events containing a non-null pseudo-user identifier.
+
+**Results:**
+
+| Metric | Value |
+|---|---:|
+| Total Events | 4,295,584 |
+| Events with User ID | 0 |
+| Events with Pseudo User ID | 4,295,584 |
+| Events Missing Pseudo User ID | 0 |
+| Pseudo User ID Completeness | 100% |
+
+**Key Findings:**
+
+- All 4.29 million events contain a `user_pseudo_id`, providing complete identifier coverage across the recorded events.
+- The `user_id` field is entirely null and cannot be used for user-level analysis.
+- Subsequent customer journey and conversion funnel analyses will use `user_pseudo_id` as the primary user identifier.
+
+**Limitations:**
+
+Although pseudo-user identifier completeness is 100%, this does not guarantee accurate identification of individual people across multiple devices or browsers. Event tracking quality and session-level consistency require further validation.
 ## Dashboard
 
 *Power BI dashboard will be added after development.*
