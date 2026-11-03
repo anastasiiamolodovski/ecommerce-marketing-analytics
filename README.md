@@ -45,8 +45,31 @@ Advertising cost data is not included, so ROAS and CAC cannot be reliably calcul
 
 ## Key Findings
 
-*To be completed after data analysis.*
+### Initial Event Distribution Findings
 
+The initial event-level analysis identified substantial differences in user participation across key e-commerce interactions.
+
+**Key observations:**
+
+- 61,252 distinct pseudo-user IDs were associated with product-view events.
+- 12,545 distinct pseudo-user IDs were associated with add-to-cart events, equivalent to 20.5% of the product-view user count.
+- 9,715 distinct pseudo-user IDs were associated with checkout-start events.
+- 4,419 distinct pseudo-user IDs were associated with purchase events.
+
+**Analytical interpretation:**
+
+The results highlight potential opportunities to investigate product-page engagement and checkout progression.
+
+The number of users associated with add-to-cart events was substantially lower than the number associated with product views. A similar difference was observed between checkout-start and purchase events.
+
+However, these figures represent independent event-level user counts rather than a sequential conversion funnel. Further analysis is required to validate user journeys, event ordering, and conversion rates.
+
+**Next steps:**
+
+- Validate user identifiers and missing values.
+- Build a sequential conversion funnel.
+- Compare conversion performance across acquisition sources and devices.
+- Investigate potential areas of friction in the purchasing journey.
 ## Dashboard
 
 *Power BI dashboard will be added after development.*
